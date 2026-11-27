@@ -15,6 +15,7 @@
   },
   "categorias": [
     {
+      "activa": true,
       "id": "cafes",
       "nombre": "Cafés",
       "productos": [
@@ -66,6 +67,7 @@
       ]
     },
     {
+      "activa": true,
       "id": "pasteleria",
       "nombre": "Pastelería",
       "productos": [
@@ -117,6 +119,7 @@
       ]
     },
     {
+      "activa": true,
       "id": "almuerzos",
       "nombre": "Almuerzos",
       "productos": [
@@ -167,5 +170,11 @@
         }
       ]
     }
-  ]
+  ],
+  "whatsapp": "5491112345678",
+  "instagram": "https://instagram.com/aromacafe",
+  "admin": {
+    "email": "admin@aroma.com",
+    "passwordHash": "f28f2a440c7feee1b17373111977ebc216df7a448d633ff83a85fdf79f700129"
+  }
 }

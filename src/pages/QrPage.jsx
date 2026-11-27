@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Pie from '../components/Pie'
 import { useLocal } from '../lib/useLocal'
 import { variablesTema } from '../lib/tema'
 import { urlPublicaMenu } from '../lib/urlPublica'
@@ -23,7 +24,6 @@ export default function QrPage() {
   useEffect(() => {
     if (!local) return
     let vigente = true
-    // La librería se carga solo en esta página para no engordar el menú.
     import('qrcode')
       .then((QRCode) => QRCode.toString(url, { ...OPCIONES_QR, type: 'svg' }))
       .then((svg) => vigente && setQr({ svg, error: false }))
@@ -47,7 +47,6 @@ export default function QrPage() {
     URL.revokeObjectURL(href)
   }
 
-  // Alta resolución (1200 px) para que se pueda imprimir sin perder nitidez.
   const descargarPng = async () => {
     const QRCode = await import('qrcode')
     const href = await QRCode.toDataURL(url, { ...OPCIONES_QR, width: 1200 })
@@ -83,6 +82,7 @@ export default function QrPage() {
           </button>
         </div>
       </main>
+      <Pie nombreMarca={local.nombre} instagramUrl={local.instagram} />
     </div>
   )
 }
