@@ -666,3 +666,9 @@ body {
 .btn-qr-filtro { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 36px; padding: 0 0.7rem; border-radius: 0.375rem; border: 1px solid var(--color-linea); background: color-mix(in srgb, var(--color-fondo) 70%, #fff); color: var(--color-texto); text-decoration: none; font-size: 0.8125rem; font-weight: 700; }
 .btn-qr-filtro:hover { border-color: var(--color-acento); color: var(--color-acento); }
 .btn-qr-filtro svg { width: 1rem; height: 1rem; flex-shrink: 0; }
+
+.selector-idioma { display: inline-flex; border: 1px solid var(--color-linea); border-radius: 0.375rem; overflow: hidden; background: color-mix(in srgb, var(--color-fondo) 75%, #fff); }
+.selector-idioma__btn { min-width: 34px; min-height: 34px; padding: 0 0.5rem; border: 0; border-right: 1px solid var(--color-linea); background: transparent; font: inherit; font-size: 0.75rem; font-weight: 700; color: var(--color-texto); cursor: pointer; }
+.selector-idioma__btn:last-child { border-right: 0; }
+.selector-idioma__btn--activo { background: var(--color-primario); color: var(--color-fondo); }
+.qr__barra-sup { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; padding-top: 1.25rem; }

@@ -1,8 +1,6 @@
+import { useIdioma } from '../context/useIdioma'
+
 export default function NoEncontrado() {
-  return (
-    <main>
-      <h1>Local no encontrado</h1>
-      <p>No encontramos el menú que buscás. Revisá que el link o el QR sean correctos.</p>
-    </main>
-  )
+  const { t } = useIdioma()
+  return (<main className="contenedor"><h1>{t('noEncontradoTitulo')}</h1><p>{t('noEncontradoSub')}</p></main>)
 }
